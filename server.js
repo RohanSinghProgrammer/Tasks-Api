@@ -3,12 +3,13 @@ const mongoose = require("mongoose");
 const morgan = require("morgan");
 const cors = require("cors");
 const authRoutes = require("./src/routes/authRoutes");
-const taskRoutes = require("./src/routes/taskRoutes")
+const taskRoutes = require("./src/routes/taskRoutes");
+const analyticsRoutes = require("./src/routes/analyticsRoutes");
 
 const app = express();
-const PORT = 4000 || process.env.port;
+const PORT = process.env.port || 4000;
 const MONGO_URI =
-  "mongodb://127.0.0.1:27017/assignment" || process.env.MONGO_URI;
+  process.env.MONGO_URI || "mongodb://127.0.0.1:27017/assignment";
 
 app.use(express.json());
 app.use(cors());
@@ -27,7 +28,8 @@ app.use(
 );
 
 app.use("/api/v1/auth", authRoutes);
-app.use('/api/v1/tasks',taskRoutes)
+app.use("/api/v1/tasks", taskRoutes);
+app.use("/api/v1/analytics", analyticsRoutes);
 
 mongoose
   .connect(MONGO_URI)
