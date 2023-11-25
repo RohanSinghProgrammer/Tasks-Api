@@ -41,6 +41,7 @@ Welcome to the Express.js project! This project provides a robust API with authe
    - `PORT`: The port on which the server will run.
    - `MONGODB_URI`: The connection string for your MongoDB database.
    - `JWT_SECRET`: A secret key used for signing JSON Web Tokens.
+   - `CRYPTO_SECRET`: A secret key used for Crypto.js.
 
 5. Start the server:
 
