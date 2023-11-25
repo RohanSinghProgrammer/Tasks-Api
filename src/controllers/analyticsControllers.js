@@ -20,7 +20,7 @@ const getAnalytics = async (req, res) => {
       },
     ]);
     const count = result.length > 0 ? result[0].count : 0;
-    res.send(`${count} tasks completed in last ${days} days`);
+    res.json({ message: `Last ${days} days data retrieve`, tasksCount: count });
   } catch (e) {
     res.status(500).send(`ERROR: ${e.message}`);
   }
