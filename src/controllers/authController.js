@@ -1,4 +1,5 @@
 const UserModel = require("../models/userModel");
+const jwt = require('jsonwebtoken');
 
 const registerUser = async (req, res) => {
   try {
@@ -18,7 +19,8 @@ const loginUser = async (req, res) => {
     if (user.password != password) {
       return res.status(403).send("Wrong credentials!");
     }
-    res.send(user);
+    let token = jwt.sign({data: JSON.stringify(user)},"SecretKey",{ expiresIn: '3d' })
+    res.json({email: user.email, token: `Bearer ${token}`});
   } catch (e) {
     res.status(500).send(e.message);
   }
