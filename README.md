@@ -71,9 +71,9 @@ http://localhost:4000/api/v1
 
   ```json
   {
-    "name": "RohanSingh",
-    "email": "Rohan@gmail.com",
-    "password": "1232456"
+    "name": "John Doe",
+    "email": "john@gmail.com",
+    "password": "SecretPassword"
   }
   ```
 
@@ -81,11 +81,14 @@ http://localhost:4000/api/v1
 
   ```json
   {
-    "name": "RohanSingh",
-    "email": "Rohan@gmail.com",
-    "password": "1232456",
-    "_id": "656184f7aeddc20fc52d62e3",
-    "__v": 0
+    "message": "User registered successfully",
+    "user": {
+      "name": "John Doe",
+      "email": "john@gmail.com",
+      "password": "SecretPassword",
+      "_id": "6561ae6a2d37328a25ebe4aa",
+      "__v": 0
+    }
   }
   ```
 
@@ -98,8 +101,8 @@ http://localhost:4000/api/v1
 
   ```json
   {
-    "email": "Rohan18@gmail.com",
-    "password": "1232456"
+    "email": "john@gmail.com",
+    "password": "SecretPassword"
   }
   ```
 
@@ -107,8 +110,8 @@ http://localhost:4000/api/v1
 
   ```json
   {
-    "email": "Rohan18@gmail.com",
-    "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoie1wiX2lkXCI6XCI2NTYwZDU5NmYyM2E5MDhiOWFhZWY1NTdcIixcIm5hbWVcIjpcIlJvaGFuU2luZ2hcIixcImVtYWlsXCI6XCJSb2hhbjE4QGdtYWlsLmNvbVwiLFwicGFzc3dvcmRcIjpcIjEyMzI0NTZcIixcIl9fdlwiOjB9IiwiaWF0IjoxNzAwODg4MzA1LCJleHAiOjE3MDExNDc1MDV9.zsGQBklqgl7yLovE94dN1d1p99a4C2wU7JALp0E0wJk"
+    "message": "Login successful",
+    "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoie1wiX2lkXCI6XCI2NTYxYWU2YTJkMzczMjhhMjVlYmU0YWFcIixcIm5hbWVcIjpcIkpvaG4gRG9lXCIsXCJlbWFpbFwiOlwiam9obkBnbWFpbC5jb21cIixcInBhc3N3b3JkXCI6XCJTZWNyZXRQYXNzd29yZFwiLFwiX192XCI6MH0iLCJpYXQiOjE3MDA5MDA1MjIsImV4cCI6MTcwMTE1OTcyMn0.aIgG5BfvJ_HiQ7AnwC9QrlMOnNQSquHutHHoqrBXHnk"
   }
   ```
 
