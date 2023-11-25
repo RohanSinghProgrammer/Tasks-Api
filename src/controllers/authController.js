@@ -19,7 +19,7 @@ const loginUser = async (req, res) => {
     if (user.password != password) {
       return res.status(403).send("Wrong credentials!");
     }
-    let token = jwt.sign({data: JSON.stringify(user)},"SecretKey",{ expiresIn: '3d' })
+    let token = jwt.sign({data: JSON.stringify(user)},process.env.JWT_SECRET,{ expiresIn: '3d' })
     res.json({email: user.email, token: `Bearer ${token}`});
   } catch (e) {
     res.status(500).send(e.message);

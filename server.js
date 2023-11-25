@@ -6,10 +6,10 @@ const authRoutes = require("./src/routes/authRoutes");
 const taskRoutes = require("./src/routes/taskRoutes");
 const analyticsRoutes = require("./src/routes/analyticsRoutes");
 
+require("dotenv").config();
 const app = express();
-const PORT = process.env.port || 4000;
-const MONGO_URI =
-  process.env.MONGO_URI || "mongodb://127.0.0.1:27017/assignment";
+const PORT = process.env.PORT;
+const MONGO_URI = process.env.MONGO_URI;
 
 app.use(express.json());
 app.use(cors());

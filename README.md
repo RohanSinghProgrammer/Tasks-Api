@@ -34,7 +34,7 @@ Welcome to the Express.js project! This project provides a robust API with authe
 
    ```env
    PORT=4000
-   MONGODB_URI=mongodb://localhost:27017/express-task
+   MONGO_URI=mongodb://localhost:27017/express-task
    JWT_SECRET=your-secret-key
    ```
 
