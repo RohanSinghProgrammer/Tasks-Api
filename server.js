@@ -35,4 +35,7 @@ mongoose
   .connect(MONGO_URI)
   .then(() => console.log("DB connected!"))
   .catch((e) => console.log(`ERROR: ${e.message}`));
+  
 app.listen(PORT, () => console.log(`App is listening on port ${PORT}`));
+
+module.exports = app;
